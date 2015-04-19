@@ -2,7 +2,7 @@ require "serial_connection"
 require "bitmap"
 require "print_mode"
 require "barcode"
-require "format"
+# require "format"
 require "control"
 require "collaborators"
 
