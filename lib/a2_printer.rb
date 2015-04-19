@@ -66,21 +66,21 @@ class A2Printer < Collaborators
     @connection.write_bytes(char)
   end
 
-  def set_size(size)
-    @format.set_size size
-  end
+#   def set_size(size)
+#     @format.set_size size
+#   end
 
-  def underline_on(weight)
-    @format.underline_on weight
-  end
+#   def underline_on(weight)
+#     @format.underline_on weight
+#   end
 
-  def underline_off
-    @format.underline_off
-  end
+#   def underline_off
+#     @format.underline_off
+#   end
 
-  def justify(position)
-    @format.justify position
-  end
+#   def justify(position)
+#     @format.justify position
+#   end
 
   def print_bitmap(*args)
     bitmap = obtain_bitmap *args
