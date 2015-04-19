@@ -19,7 +19,7 @@ class A2Printer < Collaborators
     @connection = connection
     @print_mode = PrintMode.new @connection
     @barcode = Barcode.new @connection
-    @format = Format.new @connection
+#     @format = Format.new @connection
     @control = Control.new @connection
     super(@connection)
   end
