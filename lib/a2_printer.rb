@@ -2,7 +2,6 @@ require "serial_connection"
 require "bitmap"
 require "print_mode"
 require "barcode"
-# require "format"
 require "control"
 require "collaborators"
 
@@ -19,7 +18,6 @@ class A2Printer < Collaborators
     @connection = connection
     @print_mode = PrintMode.new @connection
     @barcode = Barcode.new @connection
-#     @format = Format.new @connection
     @control = Control.new @connection
     super(@connection)
   end
@@ -33,7 +31,6 @@ class A2Printer < Collaborators
   def reset_formatting
     online
     normal
-#     @format.reset
     reset_format
     set_default_heights
   end
@@ -66,22 +63,6 @@ class A2Printer < Collaborators
     return if not_allowed? char
     @connection.write_bytes(char)
   end
-
-#   def set_size(size)
-#     @format.set_size size
-#   end
-
-#   def underline_on(weight)
-#     @format.underline_on weight
-#   end
-
-#   def underline_off
-#     @format.underline_off
-#   end
-
-#   def justify(position)
-#     @format.justify position
-#   end
 
   def print_bitmap(*args)
     bitmap = obtain_bitmap *args
