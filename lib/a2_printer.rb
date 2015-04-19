@@ -4,6 +4,7 @@ require "print_mode"
 require "barcode"
 require "format"
 require "control"
+require "collaborators"
 
 class A2Printer
 
