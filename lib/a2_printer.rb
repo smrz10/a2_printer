@@ -6,7 +6,7 @@ require "format"
 require "control"
 require "collaborators"
 
-class A2Printer
+class A2Printer < Collaborators
 
   ESC_SEQUENCE = 27
   LINE_FEED = 10
