@@ -43,6 +43,7 @@ class Format
     underline_off
     justify(:left)
   end
+  alias_method :reset_format, :reset
 
   private
 

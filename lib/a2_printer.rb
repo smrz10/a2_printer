@@ -33,7 +33,8 @@ class A2Printer < Collaborators
   def reset_formatting
     online
     normal
-    @format.reset
+#     @format.reset
+    reset_format
     set_default_heights
   end
 
