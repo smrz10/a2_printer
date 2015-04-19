@@ -21,6 +21,7 @@ class A2Printer < Collaborators
     @barcode = Barcode.new @connection
     @format = Format.new @connection
     @control = Control.new @connection
+    super(@connection)
   end
 
   def begin(heat_time)
