@@ -1,6 +1,6 @@
 require "serial_connection"
 require "bitmap"
-require "barcode"
+#require "barcode"
 require "collaborators"
 
 class A2Printer < Collaborators
