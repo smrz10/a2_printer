@@ -1,6 +1,6 @@
 require "serial_connection"
 require "bitmap"
-require "print_mode"
+# require "print_mode"
 require "barcode"
 require "collaborators"
 
