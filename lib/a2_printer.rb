@@ -2,7 +2,6 @@ require "serial_connection"
 require "bitmap"
 require "print_mode"
 require "barcode"
-#require "control"
 require "collaborators"
 
 class A2Printer < Collaborators
@@ -18,7 +17,6 @@ class A2Printer < Collaborators
     @connection = connection
     @print_mode = PrintMode.new @connection
     @barcode = Barcode.new @connection
-#    @control = Control.new @connection
     super(@connection)
   end
 
@@ -78,26 +76,6 @@ class A2Printer < Collaborators
   def print_barcode(text, type)
     @barcode.print text, type
   end
-
-  # def offline
-  #   @control.offline
-  # end
-
-  # def online
-  #   @control.online
-  # end
-
-  # def sleep
-  #   @control.sleep
-  # end
-
-  # def wake
-  #   @control.wake
-  # end
-
-  # def reset
-  #   @control.reset
-  # end
 
   def set_default
     reset_formatting
