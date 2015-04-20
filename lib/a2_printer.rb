@@ -14,7 +14,7 @@ class A2Printer < Collaborators
 
   def initialize(connection)
     @connection = connection
-    @barcode = Barcode.new @connection
+    #@barcode = Barcode.new @connection
     super(@connection)
   end
 
