@@ -2,7 +2,7 @@ require "serial_connection"
 require "bitmap"
 require "print_mode"
 require "barcode"
-require "control"
+#require "control"
 require "collaborators"
 
 class A2Printer < Collaborators
