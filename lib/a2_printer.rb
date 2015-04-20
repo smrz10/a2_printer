@@ -1,6 +1,5 @@
 require "serial_connection"
 require "bitmap"
-#require "barcode"
 require "collaborators"
 
 class A2Printer < Collaborators
@@ -14,7 +13,6 @@ class A2Printer < Collaborators
 
   def initialize(connection)
     @connection = connection
-    #@barcode = Barcode.new @connection
     super(@connection)
   end
 
@@ -66,14 +64,6 @@ class A2Printer < Collaborators
     return if bitmap.wider_than? MAXIMUM_WIDTH
     bitmap.print
   end
-
-  # def set_barcode_height(height)
-  #   @barcode.set_height height
-  # end
-
-  # def print_barcode(text, type)
-  #   @barcode.print text, type
-  # end
 
   def set_default
     reset_formatting
