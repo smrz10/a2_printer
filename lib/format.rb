@@ -39,13 +39,16 @@ class Format
     @connection.write_bytes(0x1B, 0x61, ALIGNMENT[position])
   end
 
+  def reset_format
+    reset
+  end
+
+  private
+
   def reset
     underline_off
     justify(:left)
-  end
-  alias_method :reset_format, :reset
-
-  private
+  end  
 
   def sanitized_weight weight
     result = weight
