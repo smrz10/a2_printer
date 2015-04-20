@@ -24,7 +24,7 @@ class A2Printer < Collaborators
 
   def begin(heat_time)
     reset
-    @control.set_parameters heat_time
+    set_parameters heat_time
     modify_density(calculate_density_setting)
   end
 
