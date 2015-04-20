@@ -7,12 +7,14 @@ class Barcode
   def set_height(height)
     @connection.write_bytes(29, 104, height)
   end
+  alias_method :set_barcode_height, :set_height
 
   def print(text, type)
     set_type type
     print text
     end_print
   end
+  alias_method :print_barcode, :print
 
   private
   def set_type type
