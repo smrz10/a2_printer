@@ -1,6 +1,5 @@
 require "serial_connection"
 require "bitmap"
-# require "print_mode"
 require "barcode"
 require "collaborators"
 
@@ -15,7 +14,6 @@ class A2Printer < Collaborators
 
   def initialize(connection)
     @connection = connection
-    # @print_mode = PrintMode.new @connection
     @barcode = Barcode.new @connection
     super(@connection)
   end
@@ -108,10 +106,6 @@ class A2Printer < Collaborators
   def not_allowed? char
     char == NOT_ALLOWED_CHAR
   end
-
-  # def normal
-  #   @print_mode.normal
-  # end
 
   def obtain_bitmap *args
     only_source_provided = (args.size == 1)
