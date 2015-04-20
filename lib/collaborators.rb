@@ -12,15 +12,15 @@ class Collaborators
 	    @control = Control.new @connection
 	end
 
-	def method_missing(method_name, *args, &block)	
+	def method_missing(method_name, *args, &block)
 		collaborators = obtain_collaborators
 
 		collaborators.each { |collaborator|
-			if(collaborator.respond_to?(method_name))
-				collaborator.send(method_name, *args, &block)
-				break
+			if(collaborator.respond_to?(method_name))				
+				return collaborator.send(method_name, *args, &block)				
 			end 
 		}
+		raise NoMethodError.new("Not Found")
 	end 
 
 
