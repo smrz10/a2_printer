@@ -15,7 +15,7 @@ class A2Printer < Collaborators
 
   def initialize(connection)
     @connection = connection
-    @print_mode = PrintMode.new @connection
+    # @print_mode = PrintMode.new @connection
     @barcode = Barcode.new @connection
     super(@connection)
   end
