@@ -27,6 +27,7 @@ class Collaborators
 	private
 
 	def obtain_collaborators
-		self.instance_variables
+		#instance_variables
+		[@print_mode, @barcode, @format, @control]
 	end 
 end
