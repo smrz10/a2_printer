@@ -79,25 +79,25 @@ class A2Printer < Collaborators
     @barcode.print text, type
   end
 
-  def offline
-    @control.offline
-  end
+  # def offline
+  #   @control.offline
+  # end
 
-  def online
-    @control.online
-  end
+  # def online
+  #   @control.online
+  # end
 
-  def sleep
-    @control.sleep
-  end
+  # def sleep
+  #   @control.sleep
+  # end
 
-  def wake
-    @control.wake
-  end
+  # def wake
+  #   @control.wake
+  # end
 
-  def reset
-    @control.reset
-  end
+  # def reset
+  #   @control.reset
+  # end
 
   def set_default
     reset_formatting
