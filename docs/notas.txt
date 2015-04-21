@@ -1,0 +1,19 @@
+notas de analisis
+-------------------
+necesitamos que las llamadas a los procedimientos que no son a2_printer sea delegada a sus colaboradores.
+	· se hará por nombre de procedimiento. Ojo a set_barcode_height, que en su clase es set_height
+		- lo más rápido sería crear un alias en la clase del método. Otra opción, si el problemas fuese más común, sería contemplar el filtro de nombres en el method_missing.
+
+los colaboradores dejarían de tener sentido, su definición, dentro de la clase a2_printer, solo sería necesario un objeto que los contenga y que haga el method_missing.
+	· crear la clase colaborators en el constructor de a2_printer?
+		- creo que me haria generar un doble method_missing, uno en a2_printer y otro en Colaborators
+	· hereda a2_printer de colaborators
+	
+Como hacerlo sin tener que recorrer todos los colaboradores??? y sin que en ellos se ejecute el method_missing
+	
+notas de implementacion
+--------------------------
+- el tiempo de los test deberia aumentar. Al ser procesos tan cortos, puede que de forma inapreciable.
+	· En algún momento me da la sensación de que si están tardando más. El proceso de recorrer toda la cadena de objetos no es lo más óptimo.
+	
+- por qué no me funciona "instance_variables", debería darme un array con los objetos instanciados, los colaboradores. No parece funcionar y me obliga a ponerlos manualmente. :(

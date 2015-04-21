@@ -1,0 +1,6 @@
+https://carlossanchezperez.wordpress.com/2014/02/16/method_missing-me-ayuda-a-eliminar-codigo-duplicado-espera-dejame-que-te-lo-explique/
+https://formatinternet.wordpress.com/2007/09/16/usando-method_missing-y-alias_method_chain/
+http://rubytutorial.wikidot.com/metodos
+http://stackoverflow.com/questions/2348521/in-ruby-how-do-i-check-if-method-foo-is-defined
+http://stackoverflow.com/questions/8845749/how-do-i-get-the-public-methods-of-a-class-without-inherited-methods
+http://apidock.com/ruby/Object/instance_variables
