@@ -27,12 +27,14 @@ class Control
   def reset
     @connection.write_bytes(ESC_SEQUENCE, 64)
   end
+  alias_method :reset_control, :reset
 
   def set_parameters heat_time
     @connection.write_bytes(ESC_SEQUENCE, CONTROL_PARAMETERS)
     set_default_resolution
     set_heat_conditions heat_time
   end
+  alias_method :set_control_parameters, :set_parameters
 
   private
 
