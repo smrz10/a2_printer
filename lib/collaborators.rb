@@ -6,10 +6,10 @@ require "control"
 class Collaborators
 
 	def initialize(connection)
-	    @print_mode = PrintMode.new @connection
-	    @barcode = Barcode.new @connection
-	    @format = Format.new @connection
-	    @control = Control.new @connection
+	    @print_mode = PrintMode.new connection
+	    @barcode = Barcode.new connection
+	    @format = Format.new connection
+	    @control = Control.new connection
 	end
 
 	def method_missing(method_name, *args, &block)
@@ -26,7 +26,7 @@ class Collaborators
 
 	private
 
-	def obtain_collaborators
+	def obtain_collaborators		
 		#instance_variables
 		[@print_mode, @barcode, @format, @control]
 	end 
